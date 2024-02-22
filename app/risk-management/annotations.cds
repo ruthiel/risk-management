@@ -176,16 +176,18 @@ annotate service.Risks with @(
         Data : [
             {
                 $Type : 'UI.DataField',
-                Value : miti.ID,
-                Label : '{i18n>Mitigation}',
-            },{
+                Value : miti_ID,
+                Label : 'Mitigation',
+            },
+            {
                 $Type : 'UI.DataField',
                 Value : miti.owner,
-                Label : '{i18n>Owner}',
-            },{
+                Label : 'Owner',
+            },
+            {
                 $Type : 'UI.DataField',
                 Value : miti.timeline,
-                Label : '{i18n>Timeline}',
+                Label : 'Timeline',
             },],
     }
 );
@@ -212,4 +214,13 @@ annotate service.Mitigations with {
 };
 annotate service.Mitigations with {
     timeline @Common.FieldControl : #ReadOnly
+};
+annotate service.Risks with {
+    miti @Common.Text : {
+            $value : miti.descr,
+            ![@UI.TextArrangement] : #TextOnly,
+        }
+};
+annotate service.Risks with {
+    miti @Common.ValueListWithFixedValues : true
 };
