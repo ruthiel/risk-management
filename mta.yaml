@@ -24,7 +24,6 @@ modules:
     requires:
       - name: risk-management-auth
       - name: risk-management-db
-      - name: risk-management-destination
 
   - name: risk-management-db-deployer
     type: hdb
