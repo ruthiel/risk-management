@@ -25,7 +25,7 @@ modules:
       - name: risk-management-auth
       - name: risk-management-db
 
-  - name: risk-management-db-deployer
+  - name: risk-management-db
     type: hdb
     path: gen/db
     parameters:
